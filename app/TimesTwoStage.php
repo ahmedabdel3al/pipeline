@@ -4,8 +4,9 @@ namespace App;
 
 class TimesTwoStage
 {
-    public function __invoke($payload)
+    public function handle($payload)
     {
-        return $payload * 2;
+        $payload->number = 10;
+        return $payload;
     }
 }

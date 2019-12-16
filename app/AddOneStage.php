@@ -4,8 +4,10 @@ namespace App;
 
 class AddOneStage
 {
-    public function __invoke($payload)
+    public function handle($payload)
     {
-        return $payload + 2;
+
+        $payload->number += 2;
+        return $payload;
     }
 }

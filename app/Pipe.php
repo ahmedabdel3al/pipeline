@@ -15,7 +15,6 @@ class Pipe
     {
 
         foreach ($this->line as $line) {
-
             $payload =  $this->via ? call_user_func([$line, $this->via], $payload) : $line($payload);
         }
         return $payload;
